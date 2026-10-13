@@ -1,0 +1,6 @@
+{
+  "name": "CraftPixel Studio",
+  "description": "Professional Web-Based Graphic Design Editor with full layer control, typography, vector shapes, Bengali & Unicode support, and export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
