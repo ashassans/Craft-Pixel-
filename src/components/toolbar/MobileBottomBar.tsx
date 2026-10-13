@@ -28,7 +28,7 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({ onTabClick }) 
   ];
 
   return (
-    <nav className="h-14 bg-neutral-900 border-t border-white/8 flex items-center justify-around px-2 z-20 shrink-0 md:hidden">
+    <nav className="h-16 bg-neutral-900 border-t border-white/10 flex items-center justify-around px-1 z-30 shrink-0 md:hidden pb-[env(safe-area-inset-bottom,0px)] shadow-lg">
       {tabs.map((tab) => {
         const Icon = tab.icon;
         const isActive = activeSidebarTab === tab.id;
@@ -39,8 +39,10 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({ onTabClick }) 
               setActiveSidebarTab(tab.id);
               if (onTabClick) onTabClick(tab.id);
             }}
-            className={`flex flex-col items-center justify-center py-1 px-2 rounded-lg text-[10px] font-medium transition-colors cursor-pointer ${
-              isActive ? 'text-indigo-400 bg-neutral-800' : 'text-neutral-400 hover:text-white'
+            className={`flex flex-col items-center justify-center py-1.5 px-2 rounded-xl text-[10px] font-semibold transition-all cursor-pointer active:scale-95 ${
+              isActive
+                ? 'text-indigo-400 bg-indigo-950/70 border border-indigo-500/30'
+                : 'text-neutral-400 hover:text-white'
             }`}
           >
             <Icon className="w-4 h-4 mb-0.5" />
